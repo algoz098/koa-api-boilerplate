@@ -1,0 +1,86 @@
+{
+  "name": "koa-api-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "db:seed": "node src/db/seed/index.js",
+    "dev:test": "jest --watch",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^9.4.0",
+    "bcrypt": "^5.0.0",
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "faker": "^5.1.0",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-docs": "^2.1.0",
+    "koa-joi-router": "^6.0.2",
+    "koa-joi-router-docs": "^1.2.1",
+    "koa-jwt": "^4.0.0",
+    "koa-mongoose": "^2.0.0",
+    "koa-mount": "^4.0.0",
+    "koa-static": "^5.0.0",
+    "mongoose": "^5.10.8",
+    "requires-regex": "^1.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-koa": "^2.0.2",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^26.5.2",
+    "supertest": "^5.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testTimeout": 6000,
+
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "ts",
+      "tsx"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{ts,js}",
+      "!**/node_modules/**",
+      "!**/build/**",
+      "!**/coverage/**"
+    ],
+    "coveragePathIgnorePatterns": [
+      "index.js",
+      ".eslintrc.js"
+    ],
+    "coverageDirectory": "<rootDir>/src/",
+    "coverageThreshold": {
+      "global": {
+        "branches": 10,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "coverageReporters": [
+      "text",
+      "text-summary"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts)x?$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/build/",
+      "/coverage/"
+    ]
+  }
+}
